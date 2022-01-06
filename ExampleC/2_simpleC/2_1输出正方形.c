@@ -10,20 +10,19 @@
 */
 #include <stdio.h>
 int main(){
-    int n;
+    int n,i,j;
     scanf("%d",&n);
-    switch (n)
-    {
-    case 1:
-        printf("*\n");
-        break;
-    case 2:
-        printf("**\n**\n");
-        break;
-    
-
-    
-    default:
-        break;
-    }
+    printf("\n");
+        for(i=n;i>0;i--){//行循环
+            for(j=n;j>0;j--){//列循环
+                if(i==1||i==n||j==1||j==n){
+                    printf("*");
+                }
+                else{
+                    printf(" ");
+                }
+            }
+            printf("\n");
+        }
+    return 0;
 }
